@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding-top: 70px;
+
+  background: linear-gradient(180deg, #000000, #0f172a, #14532d, #000000);
+  background-size: 400% 400%;
+  animation: fundoMove 8s ease-in-out infinite;
+}
+
+/* MENU SUPERIOR */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.topbar a{
+  color: white;
+  text-decoration: none;
+
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.topbar a:hover{
+  color: #81CF65;
+}
+
+/* TEXTO CENTRAL */
+.conteudo{
+  position: absolute;
+  top: 210px;
+
+  width: 100%;
+  text-align: center;
+
+  color: white;
+
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.conteudo h1{
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.conteudo p{
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CARDS */
+.cards{
+  margin-top: 80px;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 50px;
+
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.card{
+  text-align: center;
+  width: 320px;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+
+  padding: 15px;
+  border-radius: 20px;
+
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(129,207,101,0.4);
+}
+
+.card img{
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+
+  transition: 0.3s;
+}
+
+.card img:hover{
+  transform: scale(1.05);
+}
+
+/* TEXTO ABAIXO DAS IMAGENS */
+.card h3{
+  color: #81CF65;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.card p{
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@keyframes fundoMove{
+  0%{
+    background-position: 50% 0%;
+  }
+  50%{
+    background-position: 50% 100%;
+  }
+  100%{
+    background-position: 50% 0%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+  <a href="index-site-do-curso.html">Inicio</a>
+  <a href="sobre-professores.html">Professores</a>
+  <a href="#">Modalidades</a>
+  <a href="#">Níveis</a>
+  <a href="#">Matrículas</a>
+  <a href="#">Contato</a>
+
+</div>
+
+<!-- IMAGENS -->
+<div class="cards">
+
+  <div class="card">
+    <img src="4bracos.jpg">
+    <h3>Sobre Nós</h3>
+    <p>O Curso é uma instituição dedicada à formação de profissionais preparados para enfrentar os desafios do universo moderno. Nossa proposta une conhecimento teórico e experiências práticas inspiradas nas mais diversas espécies alienígenas conhecidas. Buscamos desenvolver habilidades como liderança, adaptação, trabalho em equipe e resolução de problemas, sempre com foco na evolução contínua dos nossos alunos.</p>
+  </div>
+
+  <div class="card">
+    <img src="Alienxx.webp">
+    <h3>Metodologia</h3>
+    <p>Nossa metodologia é baseada no aprendizado prático e no desenvolvimento progressivo de competências. Cada módulo apresenta novas transformações, tecnologias e situações reais que exigem análise, estratégia e tomada de decisão. O aluno é incentivado a explorar diferentes habilidades, compreendendo que cada alien possui características únicas que podem ser aplicadas de acordo com cada desafio.</p>
+  </div>
+
+  <div class="card">
+    <img src="friagem.jpg">
+    <h3>metodo de trabalho</h3>
+    <p>Adotamos um modelo de ensino focado em resultados, com acompanhamento constante do desempenho dos alunos. As atividades incluem missões simuladas, treinamentos intergalácticos e estudos de caso envolvendo ameaças cósmicas de diferentes níveis. Dessa forma, garantimos uma formação completa para aqueles que desejam se destacar no mercado de defesa planetária e gestão de crises universais.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

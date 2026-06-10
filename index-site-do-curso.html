@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Site</title>
+
+<style>
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding-top: 70px;
+
+  background: linear-gradient(180deg, #000000, #0f172a, #14532d, #000000);
+  background-size: 400% 400%;
+  animation: fundoMove 8s ease-in-out infinite;
+}
+
+/* MENU SUPERIOR */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.topbar a{
+  color: white;
+  text-decoration: none;
+
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.topbar a:hover{
+  color: #81CF65;
+}
+
+/* LOGIN E CADASTRO */
+.auth-buttons{
+  position: fixed;
+  top: 15px;
+  right: 80px;
+
+  z-index: 1001;
+}
+
+.auth-buttons button{
+  background: transparent;
+  color: #81CF65;
+  border: 1px solid #81CF65;
+
+  padding: 10px 15px;
+  margin-left: 5px;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth-buttons button:hover{
+  background: #81CF65;
+  color: black;
+}
+
+/* FORMULÁRIO */
+.formulario{
+  display: none;
+
+  position: fixed;
+  top: 80px;
+  right: 20px;
+
+  width: 300px;
+
+  background: #111827;
+  color: white;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+
+  z-index: 1002;
+}
+
+.formulario input{
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 5px;
+}
+
+/* TEXTO CENTRAL */
+.conteudo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50vh;
+  text-align: center;
+}
+}
+
+.conteudo h1{
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.conteudo p{
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CARROSSEL */
+.carousel,
+.carousel2{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel{
+  bottom: 40px;
+}
+
+.carousel2{
+  bottom: 260px;
+}
+
+.carousel-track,
+.carousel-track2{
+  display: flex;
+  width: max-content;
+}
+
+/* IMAGENS */
+.carousel img,
+.carousel2 img{
+  width: 300px;
+  height: 180px;
+
+  object-fit: cover;
+
+  margin-right: 20px;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* ANIMAÇÕES */
+.carousel-track{
+  animation: slide 20s linear infinite;
+}
+
+.carousel-track2{
+  animation: slide2 15s linear infinite;
+}
+
+/* MOVIMENTO DO FUNDO */
+@keyframes fundoMove{
+  0%{
+    background-position: 50% 0%;
+  }
+  50%{
+    background-position: 50% 100%;
+  }
+  100%{
+    background-position: 50% 0%;
+  }
+}
+
+@keyframes slide{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+@keyframes slide2{
+  from{ transform: translateX(-50%); }
+  to{ transform: translateX(0); }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MENU SUPERIOR -->
+<div class="topbar">
+  <a href="sobre-o-curso.html">Sobre</a>
+  <a href="sobre-professores.html">Professores</a>
+  <a href="#">Modalidades</a>
+  <a href="#">Níveis</a>
+  <a href="#">Matrículas</a>
+  <a href="#">Contato</a>
+</div>
+
+<!-- BOTÕES -->
+<div class="auth-buttons">
+  <button onclick="mostrarFormulario('login')">Login</button>
+  <button onclick="mostrarFormulario('cadastro')">Cadastro</button>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="formulario">
+  <h3>Login</h3>
+  <input type="email" placeholder="E-mail">
+  <input type="password" placeholder="Senha">
+  <button>Entrar</button>
+</div>
+
+<!-- CADASTRO -->
+<div id="cadastro" class="formulario">
+  <h3>Cadastro</h3>
+  <input type="text" placeholder="Nome">
+  <input type="email" placeholder="E-mail">
+  <input type="password" placeholder="Senha">
+  <button>Cadastrar</button>
+</div>
+
+<!-- TEXTO CENTRAL -->
+<div class="conteudo">
+  <h1>O CURSO</h1>
+  <p>Matricule-se ja</p>
+</div>
+
+<!-- CARROSSEL 2 -->
+<div class="carousel2">
+  <div class="carousel-track2">
+    <img src="omnitrix.jpg">
+    <img src="feedback.png">
+    <img src="ben10.jpg">
+    <img src="aliens.jpg">
+    <img src="Alienxx.webp">
+    <img src="4bracos.jpg">
+  </div>
+</div>
+
+<!-- CARROSSEL 1 -->
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="imagenchama.jpg">
+    <img src="EcoEcoAberturaFA2.webp">
+    <img src="aliens.png">
+    <img src="aliens2.webp">
+    <img src="Enormossaaaaaaaaaaaaaaaaaaauro.jpg">
+    <img src="Alienxx.webp">
+    <img src="friagem.jpg">
+  </div>
+</div>
+
+<script>
+
+function mostrarFormulario(tipo){
+
+  const formulario = document.getElementById(tipo);
+
+  if(formulario.style.display === "block"){
+    formulario.style.display = "none";
+    return;
+  }
+
+  document.getElementById("login").style.display = "none";
+  document.getElementById("cadastro").style.display = "none";
+
+  formulario.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
