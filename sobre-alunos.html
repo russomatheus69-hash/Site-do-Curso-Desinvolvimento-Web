@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatos dos Alunos</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+
+    background:linear-gradient(180deg,#000000,#0f172a,#14532d,#000000);
+    background-size:400% 400%;
+    animation:fundoMove 8s ease-in-out infinite;
+}
+
+/* MENU */
+.topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.topbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+}
+
+.topbar a:hover{
+    color:#81CF65;
+}
+
+/* TITULO */
+.titulo{
+    text-align:center;
+    padding-top:120px;
+}
+
+.titulo h1{
+    color:#81CF65;
+    font-size:48px;
+}
+
+.titulo p{
+    font-size:20px;
+}
+
+/* RELATOS */
+.relatos{
+    max-width:1200px;
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+
+    padding:20px;
+    justify-items:center;
+}
+
+/* CARDS */
+.card{
+    width:100%;
+    max-width:320px;
+
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h2{
+    color:#81CF65;
+    text-align:center;
+}
+
+.card p{
+    padding:15px;
+    text-align:justify;
+    font-size:18px;
+}
+
+footer{
+    margin-top:50px;
+    padding:25px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.6);
+    border-top:1px solid rgba(129,207,101,0.2);
+}
+
+/* FUNDO */
+@keyframes fundoMove{
+    0%{background-position:50% 0%;}
+    50%{background-position:50% 100%;}
+    100%{background-position:50% 0%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <a href="index-site-do-curso.html">Início</a>
+      <a href="sobre-o-curso.html">Sobre</a>
+    <a href="sobre-professores.html">Professores</a>
+    <a href="sobre-modalidades.html">Modalidades</a>
+    <a href="sobre-matriculas.html">Matrículas</a>
+</div>
+
+<div class="titulo">
+    <h1>Relatos dos Alunos</h1>
+    <p>Veja como o Curso mudou a vida dos nossos alunos.</p>
+</div>
+
+<div class="relatos">
+
+    <div class="card">
+        <img src="antes-do-curso-2.jpeg">
+        <h2>Aluno 1</h2>
+        <p>Eu era uma simples fornalha.
+            Hoje sou um dos maiores exemplos de sucesso do curso.</p>
+    </div>
+
+    <div class="card">
+        <img src="antes-do-curso-4.jpg">
+        <h2>Aluno 2</h2>
+        <p>Eu me sentia perdido e sem evolução. Hoje consegui criar rotina e evoluir de verdade.</p>
+    </div>
+
+    <div class="card">
+        <img src="antes-do-curso-5.jpg">
+        <h2>Aluno 3</h2>
+        <p>Aprendi que com orientação certa qualquer dificuldade pode ser superada.</p>
+    </div>
+
+    <div class="card">
+        <img src="eu-era-assim.webp">
+        <h2>Aluno 4</h2>
+        <p>Eu achava que não tinha potencial, mas hoje vejo o quanto posso crescer.</p>
+    </div>
+
+    <div class="card">
+        <img src="faz-matricula.jpg">
+        <h2>Aluno 5</h2>
+        <p>Se você está em dúvida, comece agora. O primeiro passo muda tudo.</p>
+    </div>
+
+<div class="card">
+    <img src="antes-curso-3.jpeg">
+    <h2>Aluno 6</h2>
+    <p>Com o curso, consegui evoluir minha disciplina e resultados de forma consistente.</p>
+</div>
+
+</div>
+
+<footer>
+    <p>Curso Omnitrix © 2026 - Formando profissionais em 10 formas diferentes.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  padding-top: 70px;
+
+  background: linear-gradient(180deg, #000000, #0f172a, #14532d, #000000);
+  background-size: 400% 400%;
+  animation: fundoMove 8s ease-in-out infinite;
+}
+
+/* MENU */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.topbar a{
+  color: white;
+  text-decoration: none;
+
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.topbar a:hover{
+  color: #81CF65;
+}
+
+/* TEXTO */
+.conteudo{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.conteudo h1{
+  font-size: 42px;
+  color: #81CF65;
+}
+
+.conteudo p{
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* CARDS */
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.card{
+  width: 280px;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+
+  padding: 18px;
+  border-radius: 15px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(129,207,101,0.3);
+}
+
+.card h3{
+  color: #81CF65;
+  font-size: 20px;
+}
+
+.card p{
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* FOOTER */
+footer{
+  margin-top: 40px;
+  padding: 20px;
+
+  text-align: center;
+
+  background: rgba(0,0,0,0.6);
+  border-top: 1px solid rgba(129,207,101,0.2);
+}
+
+/* FUNDO */
+@keyframes fundoMove{
+  0%{ background-position: 50% 0%; }
+  50%{ background-position: 50% 100%; }
+  100%{ background-position: 50% 0%; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="topbar">
+  <a href="index-site-do-curso.html">Inicio</a>
+  <a href="sobre-o-curso.html">Sobre</a>
+  <a href="sobre-Professores.html">Professores</a>
+  <a href="sobre-Alunos.html">Alunos</a>
+    <a href="sobre-matriculas.html">Matriculas</a>
+</div>
+
+<!-- TEXTO -->
+<div class="conteudo">
+  <h1>Modalidades do Curso</h1>
+  <p>Escolha a área que mais combina com você</p>
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+
+  <div class="card">
+    <h3>Automação Industrial</h3>
+    <p>Aprenda sistemas automatizados, sensores, robótica e controle industrial moderno.</p>
+  </div>
+
+  <div class="card">
+    <h3>Informática</h3>
+    <p>Desenvolvimento de sistemas, redes, suporte técnico e programação básica.</p>
+  </div>
+
+  <div class="card">
+    <h3>Eletrotécnica</h3>
+    <p>Instalações elétricas, manutenção e projetos de sistemas elétricos.</p>
+  </div>
+
+  <div class="card">
+    <h3>Soldagem Industrial</h3>
+    <p>Técnicas de solda, segurança e fabricação metálica profissional.</p>
+  </div>
+
+  <div class="card">
+    <h3>Construção Civil</h3>
+    <p>Projetos, obras, estruturas e técnicas de construção moderna.</p>
+  </div>
+
+  <div class="card">
+    <h3>Refrigeração</h3>
+    <p>Instalação e manutenção de sistemas de refrigeração e climatização.</p>
+  </div>
+
+  <div class="card">
+    <h3>Logística</h3>
+    <p>Gestão de transporte, estoque e cadeia de suprimentos.</p>
+  </div>
+
+  <div class="card">
+    <h3>Mecânica Aeronáutica</h3>
+    <p>Manutenção de aeronaves, motores e sistemas aeronáuticos avançados.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Curso Omnitrix © 2026 - Formando profissionais em 10 formas diferentes.</p>
+</footer>
+
+</body>
+</html>
